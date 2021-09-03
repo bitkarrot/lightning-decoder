@@ -9,6 +9,7 @@ import arrowImage from './assets/images/arrow.svg';
 import closeImage from './assets/images/close.svg';
 import qrcodeImage from './assets/images/qrcode.png';
 import githubImage from './assets/images/github.svg';
+import hkImage from './assets/images/bahk-logo-big-white.svg';
 
 // Utils
 import { formatDetailsKey } from './utils/keys';
@@ -354,6 +355,11 @@ export class App extends PureComponent {
 
   renderLogo = () => (
     <div className='logo'>
+      <div className='logo__title'>
+          <img
+              src={hkImage}
+              alt='Bitcoin HK'/>
+      </div>
       <div className='logo__title'>
         {APP_NAME}
       </div>
