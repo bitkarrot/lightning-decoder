@@ -2,6 +2,7 @@
 import React, { PureComponent } from 'react';
 import QrReader from 'react-qr-reader';
 import cx from 'classnames';
+import NavOne from './components/navone';
 
 // Assets
 import boltImage from './assets/images/bolt.png';
@@ -9,7 +10,7 @@ import arrowImage from './assets/images/arrow.svg';
 import closeImage from './assets/images/close.svg';
 import qrcodeImage from './assets/images/qrcode.png';
 import githubImage from './assets/images/github.svg';
-import hkImage from './assets/images/bahk-logo-big-white.svg';
+import bahkImage from './assets/images/bahk-logo.svg';
 
 // Utils
 import { formatDetailsKey } from './utils/keys';
@@ -354,13 +355,18 @@ export class App extends PureComponent {
   }
 
   renderLogo = () => (
+    <>
+    <div className="logo">
+    <NavOne/>
+    </div>
     <div className='logo'>
       <div className='logo__title'>
-          <img
-              src={hkImage}
-              alt='Bitcoin HK'/>
-      </div>
-      <div className='logo__title'>
+      <center> <img
+              width="80"
+              src={bahkImage}
+              alt='BitcoinHK'
+            /></center>
+
         {APP_NAME}
       </div>
       <div className='logo__subtitle'>
@@ -368,6 +374,7 @@ export class App extends PureComponent {
         <span className="logo__subtitle-small">{APP_SUBTAGLINE}</span>
       </div>
     </div>
+    </>
   );
 
   renderLNURLDetails = () => {
@@ -643,7 +650,6 @@ export class App extends PureComponent {
 
     return (
       <div className={appClasses}>
-        {this.renderOptions()}
         {this.renderLogo()}
         <div className='app__row'>
           {this.renderInput()}
@@ -655,6 +661,9 @@ export class App extends PureComponent {
         <div className={appColumnClasses}>
           {isLNURL ? this.renderLNURLDetails() : this.renderInvoiceDetails()}
           {this.renderErrorDetails()}
+        </div>
+        <div className={appClasses}>
+        {this.renderOptions()}
         </div>
       </div>
     );

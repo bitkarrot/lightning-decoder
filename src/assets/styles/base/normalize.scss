@@ -49,8 +49,8 @@
  article,
  aside,
  footer,
- header,
- nav,
+// header,
+// nav,
  section {
    display: block;
  }
@@ -90,12 +90,43 @@
  
  /**
   * Remove the list style on navigation lists in all browsers (opinionated).
-  */
+  
  
  nav ol,
  nav ul {
    list-style: none;
  }
+ */
+ ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: match-parent;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #555;
+  color: #eee;
+//  padding: 14px 16px;
+}
+
  
  /**
   * 1. Correct the inheritance and scaling of font size in all browsers.
