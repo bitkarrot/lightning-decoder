@@ -1,6 +1,6 @@
 # Lightning Decoder
 
-> [https://lightningdecoder.com](https://lightningdecoder.com)
+[https://lightning-decoder-hk.vercel.app/](https://lightning-decoder-hk.vercel.app/)
 
 ![Image of Lightning Decoder](https://i.imgur.com/mg6opec.png)
 
